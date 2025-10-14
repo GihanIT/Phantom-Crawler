@@ -60,8 +60,8 @@ mkdir -p ~/security-tools
 cd ~/security-tools
 
 # Clone the repository
-git clone https://github.com/[YourGitHubUsername]/phantomcrawler.git
-cd phantomcrawler
+git clone https://github.com/GihanIT/Phantom-Crawler.git
+cd Phantom-Crawler
 ```
 
 ### 4\. Install Dependencies
@@ -81,13 +81,13 @@ pip3 install lxml certifi urllib3
 ### 5\. Make Script Executable
 
 ```bash
-chmod +x phantomcrawler.py
+chmod +x PhantomCrawler.py
 ```
 
 ### 6\. Test Installation
 
 ```bash
-python3 phantomcrawler.py --help
+python3 PhantomCrawler.py --help
 ```
 
 You should see the help menu with available options.
@@ -97,13 +97,13 @@ You should see the help menu with available options.
 To run PhantomCrawler from anywhere:
 
 ```bash
-sudo ln -s $(pwd)/phantomcrawler.py /usr/local/bin/phantomcrawler
+sudo ln -s $(pwd)/PhantomCrawler.py /usr/local/bin/PhantomCrawler
 ```
 
 Then run it as:
 
 ```bash
-phantomcrawler https://example.com --depth 2
+PhantomCrawler https://example.com --depth 2
 ```
 
 ### 8\. Optional: Use a Virtual Environment
@@ -122,7 +122,7 @@ source phantom-env/bin/activate
 pip install -r requirements.txt
 
 # Run the tool
-python phantomcrawler.py https://example.com
+python PhantomCrawler.py https://example.com
 
 # Deactivate when done
 deactivate
@@ -135,31 +135,31 @@ deactivate
 ### Basic Reconnaissance
 
 ```bash
-python3 phantomcrawler.py https://example.com --depth 2 --threads 5
+python3 PhantomCrawler.py https://example.com --depth 2 --threads 5
 ```
 
 ### Deep Scan with Fuzzing
 
 ```bash
-python3 phantomcrawler.py https://example.com --depth 3 --fuzz --threads 10
+python3 PhantomCrawler.py https://example.com --depth 3 --fuzz --threads 10
 ```
 
 ### GraphQL Endpoint Probing
 
 ```bash
-python3 phantomcrawler.py https://api.example.com --graphql --depth 1
+python3 PhantomCrawler.py https://api.example.com --graphql --depth 1
 ```
 
 ### Full Security Audit
 
 ```bash
-python3 phantomcrawler.py https://example.com --depth 3 --fuzz --graphql --threads 8 --out full_audit.json
+python3 PhantomCrawler.py https://example.com --depth 3 --fuzz --graphql --threads 8 --out full_audit.json
 ```
 
 ### Output to Custom File
 
 ```bash
-python3 phantomcrawler.py https://example.com --out my_report.json
+python3 PhantomCrawler.py https://example.com --out my_report.json
 ```
 
 -----
@@ -167,7 +167,7 @@ python3 phantomcrawler.py https://example.com --out my_report.json
 ## Command-Line Options
 
 ```bash
-python3 phantomcrawler.py --help
+python3 PhantomCrawler.py --help
 ```
 
 | Option | Description | Default |
@@ -197,7 +197,7 @@ pip3 install <module_name>
 **Solution**: Ensure the script is executable:
 
 ```bash
-chmod +x phantomcrawler.py
+chmod +x PhantomCrawler.py
 ```
 
 ### SSL Certificate Errors
@@ -224,10 +224,10 @@ To remove PhantomCrawler:
 
 ```bash
 # Remove the repository
-rm -rf ~/security-tools/phantomcrawler
+rm -rf ~/security-tools/PhantomCrawler
 
 # Remove symlink (if created)
-sudo rm /usr/local/bin/phantomcrawler
+sudo rm /usr/local/bin/PhantomCrawler
 
 # Uninstall Python packages (if not used by other tools)
 pip3 uninstall requests beautifulsoup4 colorama lxml certifi urllib3
